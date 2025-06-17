@@ -355,7 +355,7 @@ Nichtvorhandensein von Diabetes bei den Patienten.
             n_cor = float(st.selectbox("", options=["0.8", "0.6", "0.4", "0.2", "0.1", "0.05", "0"], index=5))
         
         if st.button("📈 Korrelation"):
-            df_SD = self.manager.load_csv_data("data\processed\standardized_data.csv")
+            df_SD = self.manager.load_csv_data("data/processed/standardized_data.csv")
             if df_SD is not None:
                 correlations, df_CD, low_corr_features = self.manager.data_to_correlation(df_SD,n_cor)
                 st.session_state.correlations = correlations
