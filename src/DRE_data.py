@@ -11,7 +11,7 @@ class DataManager:
         self.n_pca = 0
            
     # Öffnen und Lesen einer Datei
-    def load_csv_data(self, data_file="data\diabetes.csv", delimiter=','):
+    def load_csv_data(self, data_file="data/diabetes.csv", delimiter=','):
         try:
             df = pd.read_csv(data_file, delimiter=delimiter)
             df['PatientId'] = range(1, len(df) + 1)

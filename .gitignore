@@ -1,0 +1,25 @@
+# Системные и служебные файлы
+__pycache__/
+*.py[cod]
+*.log
+*.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Среды и IDE
+.env
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+
+# Streamlit: только лишние кэши (оставим config)
+.streamlit/config.toml
+!/.streamlit/
+
+# Бинарные сборки
+*.egg-info/
+build/
+dist/

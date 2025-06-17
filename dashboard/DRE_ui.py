@@ -12,7 +12,7 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 class UI:
     def __init__(self):
-        self.manager = DataManager("data\diabetes.csv")
+        self.manager = DataManager("data/diabetes.csv")
         self.pages = {
             "Main": self.page_main,
             "Daten": self.page_data,
@@ -105,7 +105,6 @@ class UI:
     # Wir zeichnen eine Spalte mit Koordinaten. Wir verwenden Kohonen-Karten zum Zeichnen, 
     # da matplotlib.bar3D die Sortierreihenfolge nicht beibehält.
     def draw_custom_bar(self, ax, x, y, z, dx, dy, dz, color):
-        # вершины куба
         xx = [x, x+dx]
         yy = [y, y+dy]
         zz = [z, z+dz]
@@ -230,7 +229,7 @@ class UI:
                 })
                 st.session_state.df_DD_1 = df_DD_1
                 st.session_state.data_ready = True
-                df_DD_1.to_csv("data\processed\procdiabetes_data.csv", index=False, encoding="utf-8")
+                df_DD_1.to_csv("data/processed/procdiabetes_data.csv", index=False, encoding="utf-8")
             else:
                 st.error("Fehler beim Laden der Daten.")
         if st.session_state.data_ready:
@@ -427,7 +426,7 @@ erklären, wobei der Informationsverlust so gering wie möglich gehalten wird.
             value_method = st.number_input("Schwellenwert:", value=default_value)
             
         if st.button("🌀 PCA"):
-            df_CD = self.manager.load_csv_data("data\processed\correlation_data.csv")
+            df_CD = self.manager.load_csv_data("data/processed/correlation_data.csv")
             if df_CD is not None:
                 pca_df, cov_df, pca_method = self.manager.data_to_PCA(df_CD,value_method,n_method)
                 st.session_state.pca_df = pca_df
@@ -524,7 +523,7 @@ Dies ermöglicht die Visualisierung, Clusterbildung und Analyse der Datenstruktu
             n_clusters = st.number_input("Anzahl der Cluster:", value=4)
             
         if st.button("🗺️ Self-Organizing Map"):
-            pca_df = self.manager.load_csv_data("data\processed\PCA_data.csv")
+            pca_df = self.manager.load_csv_data("data/processed/PCA_data.csv")
             if pca_df is not None:
                 som_df, kohonen_map_df = self.manager.data_to_SOM(pca_df, n_map, n_clusters)
                 st.session_state.som_df = som_df
@@ -717,8 +716,8 @@ für jedes Objekt im Cluster.
             st.session_state.result_ready = False
                     
         if st.button("🔍 Analysieren"):
-            proc_df = self.manager.load_csv_data("data\processed\procdiabetes_data.csv")
-            som_df = self.manager.load_csv_data("data\processed\SOM_data.csv")
+            proc_df = self.manager.load_csv_data("data/processed/procdiabetes_data.csv")
+            som_df = self.manager.load_csv_data("data/processed/SOM_data.csv")
             if proc_df is not None:
                 if som_df is not None:
                     result_df, z_df = self.manager.data_to_result(proc_df,som_df)
