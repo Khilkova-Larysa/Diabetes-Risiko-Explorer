@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#8B0000"               # тёмно-красный
+backgroundColor="#f5f5f5"            # светло-серый фон
+secondaryBackgroundColor="#e0e0e0"   # немного темнее для боковой панели
+textColor="#000000"                  # чёрный текст
+font="Bookman Old Style"             # шрифт
