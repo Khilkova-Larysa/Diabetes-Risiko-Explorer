@@ -51,12 +51,13 @@ streamlit run DRE_app.py
 ```
 
 ## Project Structure
-**DRE_app.py** — main Streamlit application script
-**data/** — folder containing datasets like diabetes.csv
-**dashboard/** — UI components and helper scripts
-**src/** — data class components
-**plots/** — visualization results
-**requirements.txt** — list of Python dependencies
+
+- **DRE_app.py** — main Streamlit application script
+- **data/** — folder containing datasets like diabetes.csv
+- **dashboard/** — UI components and helper scripts
+- **src/** — data class components
+- **plots/** — visualization results
+- **requirements.txt** — list of Python dependencies
 
 ## License
 This project is licensed under the **MIT License**. See the **LICENSE** file for details.
