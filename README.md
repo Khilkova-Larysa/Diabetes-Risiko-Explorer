@@ -1,5 +1,5 @@
 # 🧬Diabetes-Risiko-Explorer
-Diabetes Risk Explorer is an interactive Streamlit application designed to help explore and analyze medical data related to diabetes risk. While medical data often contain unclear patterns, this project aims to clarify relationships within the data and reveal its structure through data analysis methods.
+Diabetes-Risiko-Explorer is an interactive Streamlit application designed to help explore and analyze medical data related to diabetes risk. While medical data often contain unclear patterns, this project aims to clarify relationships within the data and reveal its structure through data analysis methods.
 
 ## Features
 
