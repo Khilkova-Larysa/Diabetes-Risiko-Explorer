@@ -60,6 +60,7 @@ streamlit run DRE_app.py
 
 ## License
 This project is licensed under the **MIT License**. See the **LICENSE** file for details.
+Feel free to use, modify, and distribute with attribution.
 
 ## Contact
 For questions or collaboration, please contact: Larysa Khilkova https://www.linkedin.com/in/dr-larysa-khilkova-b09128269/
